@@ -1,0 +1,37 @@
+app:
+  cert_file_path: "../certs/private_key.pem"
+server:
+  host: 127.0.0.1
+  port: 8081 # grpc port
+  timeout:
+    server: "30s"
+    read: "15s"
+    write: "10s"
+    idle: "5s"
+database:
+  host: 127.0.0.1
+  port: 5432
+  user: "user"
+  password: "password"
+  dbname: "dbname"
+  sslmode: "disable"
+  pool_connection:
+    max_open_conns: 25
+    max_idle_conns: 25
+    max_life_time: "5m" # minutes
+jwt:
+  accessTokenDuration:  "5m"  # minutes
+  refreshTokenDuration: 30 # days
+  issuer: "user_service"
+redis:
+  host: "localhost"
+  port: 6379
+  user: "user"
+  password: "password"
+  dbIdx: 0
+argon2:
+  times: 3
+  memory: 64
+  keyLen: 32
+  saltLen: 16
+  threads: 2

@@ -1,3 +1,0 @@
-[submodule "user_service"]
-	path = user_service
-	url = https://github.com/HunterGooD/voice_friend_user_service

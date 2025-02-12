@@ -1,1 +1,12 @@
 config/config.yaml
+.env
+.vscode/
+.idea/
+*.swp
+*.swo
+*.sublime-workspace
+*.sublime-project
+.DS_Store
+Thumbs.db
+bin/
+dist/

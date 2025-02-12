@@ -3,7 +3,7 @@ package repository
 import (
 	"context"
 	"database/sql"
-	"github.com/HunterGooD/voice_friend/user_service/internal/domain/entity"
+	"github.com/HunterGooD/voice_friend_user_service/internal/domain/entity"
 	"github.com/jmoiron/sqlx"
 	"github.com/pkg/errors"
 )

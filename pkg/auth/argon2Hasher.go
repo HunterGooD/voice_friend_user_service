@@ -5,7 +5,7 @@ import (
 	"crypto/subtle"
 	"encoding/base64"
 	"fmt"
-	"github.com/HunterGooD/voice_friend/user_service/internal/domain/entity"
+	"github.com/HunterGooD/voice_friend_user_service/internal/domain/entity"
 	"regexp"
 	"strconv"
 

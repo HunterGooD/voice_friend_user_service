@@ -1,4 +1,4 @@
-module github.com/HunterGooD/voice_friend/user_service
+module github.com/HunterGooD/voice_friend_user_service
 
 go 1.22.6
 

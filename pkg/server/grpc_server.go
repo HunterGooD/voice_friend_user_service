@@ -9,7 +9,7 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/HunterGooD/voice_friend/user_service/pkg/logger"
+	"github.com/HunterGooD/voice_friend_user_service/pkg/logger"
 	grpclog "github.com/grpc-ecosystem/go-grpc-middleware/v2/interceptors/logging"
 	"github.com/grpc-ecosystem/go-grpc-middleware/v2/interceptors/recovery"
 

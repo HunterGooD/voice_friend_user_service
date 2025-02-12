@@ -1,7 +1,7 @@
 package utils_test
 
 import (
-	"github.com/HunterGooD/voice_friend/user_service/pkg/utils"
+	"github.com/HunterGooD/voice_friend_user_service/pkg/utils"
 	"github.com/stretchr/testify/require"
 	"testing"
 )

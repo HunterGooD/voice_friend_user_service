@@ -3,8 +3,8 @@ package handler
 import (
 	"context"
 
-	"github.com/HunterGooD/voice_friend/user_service/pkg/logger"
 	pd "github.com/HunterGooD/voice_friend_contracts/gen/go/user_service"
+	"github.com/HunterGooD/voice_friend_user_service/pkg/logger"
 )
 
 type UserProfileUsecase interface {

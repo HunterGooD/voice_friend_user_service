@@ -3,7 +3,7 @@ package repository
 import (
 	"context"
 	"fmt"
-	"github.com/HunterGooD/voice_friend/user_service/internal/domain/entity"
+	"github.com/HunterGooD/voice_friend_user_service/internal/domain/entity"
 	"github.com/pkg/errors"
 	"github.com/redis/go-redis/v9"
 	"time"

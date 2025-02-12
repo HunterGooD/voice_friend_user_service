@@ -4,11 +4,11 @@ import (
 	"context"
 	"google.golang.org/grpc"
 
-	"github.com/HunterGooD/voice_friend/user_service/internal/domain/entity"
+	"github.com/HunterGooD/voice_friend_user_service/internal/domain/entity"
 	// TODO: domain interface
-	"github.com/HunterGooD/voice_friend/user_service/pkg/logger"
-	"github.com/HunterGooD/voice_friend/user_service/pkg/utils"
 	pd "github.com/HunterGooD/voice_friend_contracts/gen/go/user_service"
+	"github.com/HunterGooD/voice_friend_user_service/pkg/logger"
+	"github.com/HunterGooD/voice_friend_user_service/pkg/utils"
 	"github.com/pkg/errors"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"

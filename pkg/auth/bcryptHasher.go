@@ -1,7 +1,7 @@
 package auth
 
 import (
-	"github.com/HunterGooD/voice_friend/user_service/internal/domain/entity"
+	"github.com/HunterGooD/voice_friend_user_service/internal/domain/entity"
 	"github.com/pkg/errors"
 	"golang.org/x/crypto/bcrypt"
 )

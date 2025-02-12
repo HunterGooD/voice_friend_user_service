@@ -3,7 +3,7 @@ package usecase
 import (
 	"context"
 
-	"github.com/HunterGooD/voice_friend/user_service/pkg/logger"
+	"github.com/HunterGooD/voice_friend_user_service/pkg/logger"
 )
 
 type UserProfileUsecase struct {

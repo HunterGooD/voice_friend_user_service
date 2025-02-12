@@ -1,18 +1,18 @@
 package main
 
 import (
-	"github.com/HunterGooD/voice_friend/user_service/internal/adapter"
-	auth2 "github.com/HunterGooD/voice_friend/user_service/pkg/auth"
+	"github.com/HunterGooD/voice_friend_user_service/internal/adapter"
+	auth2 "github.com/HunterGooD/voice_friend_user_service/pkg/auth"
 	"os"
 	"time"
 
-	"github.com/HunterGooD/voice_friend/user_service/config"
-	"github.com/HunterGooD/voice_friend/user_service/internal/handler"
-	"github.com/HunterGooD/voice_friend/user_service/internal/repository"
-	"github.com/HunterGooD/voice_friend/user_service/internal/usecase"
-	"github.com/HunterGooD/voice_friend/user_service/pkg/database"
-	"github.com/HunterGooD/voice_friend/user_service/pkg/logger"
-	"github.com/HunterGooD/voice_friend/user_service/pkg/server"
+	"github.com/HunterGooD/voice_friend_user_service/config"
+	"github.com/HunterGooD/voice_friend_user_service/internal/handler"
+	"github.com/HunterGooD/voice_friend_user_service/internal/repository"
+	"github.com/HunterGooD/voice_friend_user_service/internal/usecase"
+	"github.com/HunterGooD/voice_friend_user_service/pkg/database"
+	"github.com/HunterGooD/voice_friend_user_service/pkg/logger"
+	"github.com/HunterGooD/voice_friend_user_service/pkg/server"
 )
 
 func main() {

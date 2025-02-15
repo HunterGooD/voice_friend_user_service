@@ -8,6 +8,7 @@ type Logger interface {
 	Warn(message string, opt ...any)
 	Error(message string, opt ...any)
 	Log(ctx context.Context, lvl int, message string, fields ...any)
+	Sync() error
 }
 
 type LogLevel int

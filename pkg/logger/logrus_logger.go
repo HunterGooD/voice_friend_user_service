@@ -10,11 +10,11 @@ import (
 	"github.com/sirupsen/logrus"
 )
 
-type logrusLogger struct {
+type LogrusLogger struct {
 	l *logrus.Logger
 }
 
-func NewTextLogrusLogger(w io.Writer, logLevel string) *logrusLogger {
+func NewTextLogrusLogger(w io.Writer, logLevel string) *LogrusLogger {
 	log := logrus.New()
 	switch strings.ToUpper(logLevel) {
 	case "INFO":
@@ -24,10 +24,10 @@ func NewTextLogrusLogger(w io.Writer, logLevel string) *logrusLogger {
 	}
 	log.SetOutput(w)
 	log.SetFormatter(&logrus.TextFormatter{})
-	return &logrusLogger{log}
+	return &LogrusLogger{log}
 }
 
-func NewJsonLogrusLogger(w io.Writer, logLevel string) *logrusLogger {
+func NewJsonLogrusLogger(w io.Writer, logLevel string) *LogrusLogger {
 	log := logrus.New()
 	switch strings.ToUpper(logLevel) {
 	case "INFO":
@@ -40,30 +40,30 @@ func NewJsonLogrusLogger(w io.Writer, logLevel string) *logrusLogger {
 	log.SetOutput(w)
 	log.SetFormatter(&logrus.JSONFormatter{})
 
-	return &logrusLogger{log}
+	return &LogrusLogger{log}
 }
 
-func (log *logrusLogger) Info(message string, opt ...any) {
+func (log *LogrusLogger) Info(message string, opt ...any) {
 	params := log.parseLogrusOpt(opt...)
 	log.l.WithFields(params).Info(message)
 }
 
-func (log *logrusLogger) Debug(message string, opt ...any) {
+func (log *LogrusLogger) Debug(message string, opt ...any) {
 	params := log.parseLogrusOpt(opt...)
 	log.l.WithFields(params).Debug(message)
 }
 
-func (log *logrusLogger) Warn(message string, opt ...any) {
+func (log *LogrusLogger) Warn(message string, opt ...any) {
 	params := log.parseLogrusOpt(opt...)
 	log.l.WithFields(params).Warn(message)
 }
 
-func (log *logrusLogger) Error(message string, opt ...any) {
+func (log *LogrusLogger) Error(message string, opt ...any) {
 	params := log.parseLogrusOpt(opt...)
 	log.l.WithFields(params).Error(message)
 }
 
-func (log *logrusLogger) Log(_ context.Context, lvl int, message string, fields ...any) {
+func (log *LogrusLogger) Log(_ context.Context, lvl int, message string, fields ...any) {
 	// adapter log level from grpclog(slog) using slog level log
 	var logrusLevel logrus.Level
 	switch LogLevel(lvl) {
@@ -88,7 +88,11 @@ func (log *logrusLogger) Log(_ context.Context, lvl int, message string, fields 
 	log.l.WithFields(logrusFields).Log(logrusLevel, message)
 }
 
-func (log *logrusLogger) parseLogrusOpt(opt ...any) logrus.Fields {
+func (log *LogrusLogger) Sync() error {
+	return nil
+}
+
+func (log *LogrusLogger) parseLogrusOpt(opt ...any) logrus.Fields {
 	params := make(logrus.Fields)
 	for k, v := range opt {
 		switch val := v.(type) {

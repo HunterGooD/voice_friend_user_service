@@ -13,7 +13,7 @@ type ZapLogger struct {
 }
 
 func NewZapLogger() *ZapLogger {
-	config := zap.NewProductionConfig()
+	config := zap.NewDevelopmentConfig()
 	config.EncoderConfig.TimeKey = "timestamp"
 	config.EncoderConfig.EncodeTime = zapcore.ISO8601TimeEncoder
 

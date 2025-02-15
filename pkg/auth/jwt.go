@@ -24,6 +24,10 @@ type JWT struct {
 	audience             []string
 }
 
+func NewJWTGeneratorDefault(issuer string) *JWT {
+	return &JWT{issuer: issuer}
+}
+
 func NewJWTGenerator(privateKey *rsa.PrivateKey, publicKey *rsa.PublicKey, issuer string, accessToken, refreshToken time.Duration, audience []string) *JWT {
 	return &JWT{
 		privateKey,
